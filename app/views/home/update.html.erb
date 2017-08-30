@@ -1,0 +1,55 @@
+<div class="header">
+      <h3 align="center">< 게시글 수정 ></h3>
+</div>
+<div class="nav">
+     <p></p>
+    <ul class="nav flex-column" align="center">
+  <li class="nav-item">
+    <a class="nav-link active" href="#">Active</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled" href="#">Disabled</a>
+  </li>
+</ul>
+</div>
+<div class="container">
+    <form action="/home/edit/<%= @post.id%>" method="get">
+        <p></p>
+        <div class="form-group">
+            <label for="exampleInputTitle">제목</label><a href="/home/read" class="goToBoard">글 목록으로 가기</a>
+            <input type="text" name = "title_of_post" class="form-control" id="exampleInputTitle" placeholder="<%= @post.title %>">
+        </div>
+        <p></p>
+        <div class="form-group">
+            <label for="exampleTextarea">내용</label>
+            <textarea name="textarea_of_post" class="form-control" id="exampleTextarea" rows="5" placeholder="<%= @post.content %>"></textarea>
+        </div>
+         <center><button type="submit" class="btn btn-primary">Submit</button></center>
+    </form>
+</div>
+<div class="footer"></div>
+<style>
+    .goToBoard{
+        float:right;
+        text-decoration:none;
+    }
+    .header{
+        margin-top:30px;
+        height:60px;
+    }
+    .nav{
+        width:100px;
+        margin-top:50px;
+        float:left;
+    }
+    .container{
+        margin-top:50px;
+        float:right;
+    }
+</style>
